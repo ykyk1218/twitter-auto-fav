@@ -9,7 +9,7 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
-  robot.hear /hogehogehoge/, (res)  ->
+  robot.hear /エンジニア|プログラマー|パフォーマンス/, (res)  ->
     # お気に入りに登録する
     fav_api_url = "https://api.twitter.com/1.1/favorites/create.json"
     tweet_id = res.message.user.status_id
