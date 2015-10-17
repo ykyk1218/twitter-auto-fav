@@ -10,7 +10,11 @@
 npm install
 ```
 
-## 起動スクリプトの用意
+## 実行方法
+
+### ローカルの場合
+
+下記内容のシェルスクリプトを用意
 
 ```
 export HUBOT_TWITTER_KEY="consumer key"
@@ -27,6 +31,26 @@ bin/hubot -a twitter-ext -n TwitterMonitor
 ```
 ./local_run.sh
 ```
+
+### herokuで実行する場合
+
+環境変数を設定する
+
+```
+$ heroku config:set HUBOT_TWITTER_KEY="value"
+$ heroku config:set HUBOT_TWITTER_SECRET="value"
+$ heroku config:set HUBOT_TWITTER_TOKEN="value"
+$ heroku config:set HUBOT_TWITTER_TOKEN_SECRET="value"
+
+```
+
+herokuにpush
+
+```
+git push heroku master
+```
+
+
 
 # 監視キーワードの変更
 
