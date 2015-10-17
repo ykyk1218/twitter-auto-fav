@@ -1,5 +1,4 @@
 module.exports = (robot) ->
   robot.router.get '/hubot/ping', (req, res) ->
-    res.writeHead 200, {"Content-Type": "text/html"};
-    res.write "ok"
-    res.end
+    robot.logger.info 'ping ping ping'
+    res.send 200
